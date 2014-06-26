@@ -3,16 +3,16 @@
 ## Base de donnée
 
 ### Table users
-- ID
-- login
-- password
+- ID (int)
+- login (varchar)
+- password (varchar)
 
 ### Table messages
-- ID
-- user_id_dest
-- user_id_exp
-- message
-- create_date
+- ID (int)
+- user_id_dest (int)
+- user_id_exp (int)
+- message (text)
+- create_date (datetime)
 
 ## Création formulaire d'inscription
 

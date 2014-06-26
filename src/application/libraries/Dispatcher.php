@@ -6,7 +6,6 @@
  * Il peuple ensuite l'objet Response avec le resultat genere (headers eventuels, body)
  * 
  * @category IP_lib
- * @author alexandra
  * @version 0.0.1
  *
  */

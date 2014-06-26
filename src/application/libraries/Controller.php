@@ -5,7 +5,6 @@
  * Socle de construction des pages
  * 
  * @category IP_lib
- * @author alexandra
  * @version 0.0.1
  *
  */

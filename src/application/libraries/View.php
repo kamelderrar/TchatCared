@@ -5,7 +5,6 @@
  * Affiche le resultat d'une execution MVC
  * 
  * @category IP_lib
- * @author alexandra
  * @version 0.0.1
  *
  */

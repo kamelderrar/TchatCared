@@ -5,7 +5,6 @@
  * Représente l'entrée de l'application (la requete HTTP qui va declencher l'execution de l'application)
  * 
  * @category IP_lib
- * @author alexandra
  * @version 0.0.1
  * 
  */

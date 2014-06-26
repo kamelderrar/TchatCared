@@ -7,7 +7,6 @@
  * 
  * @category IP_lib
  * @version 0.0.1
- * @author alexandra
  *
  */
 class Router

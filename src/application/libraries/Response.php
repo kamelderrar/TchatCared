@@ -5,7 +5,6 @@
  * Represente la reponse HTTP qui sera renvoyee par le serveur HTTP au clien a la fin de l'execution
  * 
  * @category IP_lib
- * @author alexandra
  * @version 0.0.1
  *
  */

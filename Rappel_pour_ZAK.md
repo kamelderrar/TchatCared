@@ -4,5 +4,3 @@ PULL
 ADD
 COMMIT
 PUSH
-
-Ou non

@@ -1,6 +1,15 @@
 <?php if (FALSE == $this->auth) {?>
     <h1>Login</h1>
+    <?php if (!empty($this->errMessages)) {
+    	echo '<ul>';
+    	foreach ($this->errMessages as $value) {
+			echo '<li>' . $value . '</li>';
+    	}
+    	echo '</ul>';
+	}?>
     <form method="POST" action="">
        <label>Login : <input name="login" id="login" type="text"/></label>
+       <label>Password : <input name="password" id="password" type="password"/></label>
+       <input name="Submit" id="Submit" type="Submit"/>
     </form>
 <?php }?>

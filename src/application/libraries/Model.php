@@ -25,6 +25,10 @@ abstract Class Model
         
     }
     
+    public function getDb(){
+    	return self::$pdo;
+    }
+    
     abstract public function find($id);
     
     abstract public function fetchAll();

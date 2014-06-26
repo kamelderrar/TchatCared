@@ -1,0 +1,26 @@
+<?php 
+    $this->setTitle('');
+    $this->setDesc('');
+?>
+                <div class="col-md-12" style="background-color: #999">
+                    <h1>Tablettes et smartphones</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul>
+                        <?php foreach( $this->tablettes as $tablette) :?>
+                            <li>
+                            <a href="/viewtablette?id=<?= $tablette['id']?>">
+                            <img src="/img/<?= $tablette['image']?>" /> 
+                            <?= $tablette['nom']?> 
+                            <?= array_key_exists('qte', $tablette) ? "({$tablette['qte']})" : ''?>
+                            </a>
+                            </li>
+                        <?php endforeach;?>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                    
+                    </div>
+                </div>
+                

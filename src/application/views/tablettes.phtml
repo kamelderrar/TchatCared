@@ -1,0 +1,23 @@
+<?php 
+    $this->setTitle('Tablettes et e-book'); 
+    $this->setDesc('Page présentant les modèles de tablettes et e-book');
+?>
+<div class="row" id="section1">
+	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+	   <ul class="list-group">
+	   <?php foreach($this->menu as $elmt) : ?>
+	       <li class="list-group-item">
+	       <?php if(array_key_exists(2, $elmt)) : ?>
+               <span class="badge">(<?= $elmt[2] ?>)</span>
+           <?php endif;?>
+           <a href="#">
+               <img class="media-object" alt="<?= $elmt[0]?>" src="img/tablettes/menu/<?= $elmt[0]?>.jpg">
+               <?= $elmt[1]?>
+           </a></li>
+	   <?php endforeach ?>
+	   </ul>
+	</div>
+	<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+	   <img class="adjust" alt="images tablettes" src="img/tablettes/img_right.png">
+	</div>
+</div><!-- row section1 -->

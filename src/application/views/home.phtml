@@ -1,6 +1,8 @@
 <?php if (FALSE == $this->auth) {?>
     <h1>Login</h1>
     <form method="POST" action="">
-       <label>Login : <input name="login" id="login" type="text"/></label>
+       <label>Login : <input name="login" id="login" type="text"/></label><br /><br />
+       <label for="pwd">Password : </label><input name="pwd" id="pwd" type="password" /><br /><br />
+       <input type="submit" value="Envoyer" />
     </form>
 <?php }?>

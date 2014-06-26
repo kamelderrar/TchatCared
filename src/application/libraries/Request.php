@@ -33,6 +33,11 @@ class Request
     private $route;
 
     /**
+     * Variable qui contient l'objet SESSION
+     * @var SESSION
+     */
+    private $session;
+    /**
      * Constructeur
      */
     public function __construct()
@@ -89,5 +94,22 @@ class Request
     {
         $this->route = $route;
     }
+    
+	/**
+     * @return the $session
+     */
+    public function getSession()
+    {
+        return $this->session;
+    }
 
+	/**
+     * @param Session $session
+     */
+    public function setSession($session)
+    {
+        $this->session = $session;
+        return $this;
+    }
+    
 }// end of Request

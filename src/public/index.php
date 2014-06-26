@@ -10,6 +10,7 @@ define('LAYOUT_PATH', APPLICATION_PATH . DS . 'layouts');
 define('LIBRARY_PATH', APPLICATION_PATH . DS . 'libraries');
 
 require_once LIBRARY_PATH . DS . 'Request.php';
+require_once LIBRARY_PATH . DS . 'Session.php';
 require_once LIBRARY_PATH . DS . 'Response.php';
 require_once LIBRARY_PATH . DS . 'Router.php';
 require_once LIBRARY_PATH . DS . 'Dispatcher.php';
@@ -19,6 +20,9 @@ require_once LIBRARY_PATH . DS . 'Layout.php';
 
 $request = new Request;
 $response = new Response;
+
+$session = new Session;
+$request->setSession($session);
 
 $router = new Router($request);
 $router->route();

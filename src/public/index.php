@@ -16,7 +16,6 @@ require_once LIBRARY_PATH . DS . 'Dispatcher.php';
 require_once LIBRARY_PATH . DS . 'View.php';
 require_once LIBRARY_PATH . DS . 'Controller.php';
 require_once LIBRARY_PATH . DS . 'Layout.php';
-require_once MODEL_PATH . DS . 'Menu.php';
 
 $request = new Request;
 $response = new Response;

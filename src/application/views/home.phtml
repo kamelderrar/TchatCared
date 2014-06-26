@@ -1,3 +1,6 @@
-<form   >
-
-</form>
+<?php if (FALSE == $this->auth) {?>
+    <h1>Login</h1>
+    <form method="POST" action="">
+       <label>Login : <input name="login" id="login" type="text"/></label>
+    </form>
+<?php }?>

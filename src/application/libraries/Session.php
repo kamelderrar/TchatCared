@@ -20,7 +20,10 @@ class Session {
      * @return mixed
      */
     public function getNamespace($name){
-        return $_SESSION[$name];
+        if (isset($_SESSION[$name])){
+            return $_SESSION[$name];
+        }
+        return FALSE;
     }
     
     /**

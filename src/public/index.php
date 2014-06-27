@@ -14,9 +14,11 @@ require_once LIBRARY_PATH . DS . 'Session.php';
 require_once LIBRARY_PATH . DS . 'Response.php';
 require_once LIBRARY_PATH . DS . 'Router.php';
 require_once LIBRARY_PATH . DS . 'Dispatcher.php';
+require_once LIBRARY_PATH . DS . 'Model.php';
 require_once LIBRARY_PATH . DS . 'View.php';
 require_once LIBRARY_PATH . DS . 'Controller.php';
 require_once LIBRARY_PATH . DS . 'Layout.php';
+
 
 $request = new Request;
 $response = new Response;

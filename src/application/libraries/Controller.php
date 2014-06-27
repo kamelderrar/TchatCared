@@ -41,9 +41,32 @@ abstract class Controller
         $this->response = $response;
         $this->view = new View($this->request->getRoute());
         $this->layout = new Layout($this->view);
+        if(!empty($_POST)){
+        	$this->data = new stdClass();
+        	foreach($_POST as $k=>$v){
+        		$this->data->$k=$v;
+        	}
+        }
+    }
+    /**
+     * Permet de charger un model
+     **/
+    public function loadModel($name,$form=null)
+    {
+    	if(!isset($this->$name)){
+    		$file = MODEL_PATH . DS .$name.'.php';
+    		echo $file;
+    		require_once($file);
+    		$this->$name = new $name();
+    		if(isset($form)){
+    			$this->$name->form = new Form();
+    			$this->$name->form->data = $this->request->data;
+    		}
+    	}
+    
     }
     
-    abstract public function action();
+  // abstract public function action();
     
     public function __destruct()
     {

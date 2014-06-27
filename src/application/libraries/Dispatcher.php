@@ -43,10 +43,21 @@ class Dispatcher
         $controllerName = ucfirst($this->request->getRoute()) . 'Controller';
         $controllerFile = $controllerName . '.php';
         
+        $params = $this->request->getParams();
+        
         require_once CONTROLLER_PATH . DS . $controllerFile;
         // Instanciation dynamique du controller
         $controller = new $controllerName($this->request, $this->response);
         
-        $controller->action();
+    	if (isset($params['action'])){
+        	$action = $params['action'];
+        }else{
+            $action='action';
+        }
+        if(method_exists($controllerName, $action)){
+            $controller->$action();  // Si la méthode demandée en paramètre(?action=???) existe on appellera celle ci
+        }else{
+            $controller->action();  // Appel de la fonction par default
+        }
     }
 }

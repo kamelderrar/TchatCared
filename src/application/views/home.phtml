@@ -1,8 +1,15 @@
-<?php if (FALSE == $this->auth) {?>
-    <h1>Login</h1>
-    <form method="POST" action="">
+    <h1>S'enregistrer</h1>
+    <form method="POST" action="home?action=inscription">
        <label>Login : <input name="login" id="login" type="text"/></label>
        <label>Mot de passe : <input name="password" id="password" type="password"/></label>
        <input type ='submit' value = "s'inscrire" />
+    </form>
+<?php
+if (FALSE == $this->auth) {?>
+    <h1>Login</h1>
+    <form method="POST" action="home?action=inscription">
+       <label>Login : <input name="login" id="login" type="text"/></label>
+       <label>Mot de passe : <input name="password" id="password" type="password"/></label>
+       <input type ='submit' value = "se loger" />
     </form>
 <?php }?>

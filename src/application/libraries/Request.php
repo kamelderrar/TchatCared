@@ -36,15 +36,29 @@ class Request
      * Variable qui contient l'objet SESSION
      * @var SESSION
      */
+    
+    /**
+     * 
+     * @var object contient les données de $_POST
+     */
+    public $data = false;
+    
     private $session;
     /**
      * Constructeur
      */
+
     public function __construct()
     {
         $this->url = ltrim($_SERVER['REQUEST_URI'], '/');
         $this->method = $_SERVER['REQUEST_METHOD'];
         $this->params = $_REQUEST;
+        if(!empty($_POST)){
+        	$this->data = new stdClass();
+        	foreach($_POST as $k=>$v){
+        		$this->data->$k=$v;
+        	}
+        }
     }// end of __construct
     
 	/**

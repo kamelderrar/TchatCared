@@ -23,11 +23,14 @@ class HomeController extends Controller
                 $this->User->save($this->request->data);
                 echo ('Compte crée');
             }else{
-                echo ('Erreur dans l\'ajout des donnes');
-                //$this->Session->setFlash('Merci de corriger vos informations','error'); 
+                echo ('Erreur dans l\'ajout des donnes'); 
             }
         }else{
         	echo('Aucune données a enregistrer');
         }
+      }
+      public function login(){
+      	echo ("action=login");
+      	$this->view->auth = $this->request->getSession()->getNamespace('auth');
       }
 }

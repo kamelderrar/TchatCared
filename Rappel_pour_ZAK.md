@@ -4,3 +4,7 @@ PULL
 ADD
 COMMIT
 PUSH
+
+Etape pour récupérer des fichiers :
+
+PULL

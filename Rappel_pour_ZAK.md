@@ -8,3 +8,5 @@ PUSH
 Etape pour récupérer des fichiers :
 
 PULL
+
+modif pour comit

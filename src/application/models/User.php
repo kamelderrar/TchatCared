@@ -22,4 +22,14 @@ class UserModel extends Model
 		
     	return $statement->fetch();
     }
+    
+    public function fetchAllByCondition($condition) {
+        
+        $query = "SELECT * FROM `users` WHERE " . $condition;
+        
+        $statement = $this->getDb()->prepare($query);
+        $statement->execute();
+        
+        return $statement->fetchAll();
+    }
 }

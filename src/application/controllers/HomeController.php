@@ -9,6 +9,7 @@ class HomeController extends Controller//Class HomeController héritant de la Cl
 {
     public function action()//Méthode public action
     {
+
         $errMessages = array();//Création d'une variable $errMessages contenant un tableau vide
         
         if ($this->request->getMethod() == 'POST') {//Condition de test pour savoir si il y a un POST
@@ -37,5 +38,5 @@ class HomeController extends Controller//Class HomeController héritant de la Cl
         }
         
         $this->view->auth = $this->request->getSession()->getNamespace('auth');
-    }
+	}
 }

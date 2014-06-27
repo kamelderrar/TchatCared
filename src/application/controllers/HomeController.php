@@ -32,6 +32,7 @@ class HomeController extends Controller//Class HomeController héritant de la Cl
         		$errMessages[] = 'Password obligatoire';//Ajout d'un message d'erreur
         	}
 
+        	
         	$this->view->errMessages = $errMessages;
         
         }

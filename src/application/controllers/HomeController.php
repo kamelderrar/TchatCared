@@ -35,7 +35,7 @@ class HomeController extends Controller
         	$this->view->errMessages = $errMessages;
         
         }
-        $this->request->getSession()->unsetSession();
+        
         $this->view->auth = $this->request->getSession()->getNamespace('auth');
     }
 }
